@@ -1,0 +1,13 @@
+public void executeGradeReport(double score) {
+    // 1. Call validateScore. If false, print error and stop.
+    if (!validateScore(score)) {
+        System.out.println("Invalid Score");
+        return; 
+    }
+
+    // 2. If valid, call calculateLetterGrade and store it.
+    char grade = calculateLetterGrade(score);
+
+    // 3. Pass that letter grade into displayPerformanceMessage.
+    displayPerformanceMessage(grade);
+}
